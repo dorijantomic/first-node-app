@@ -24,15 +24,18 @@ const fs = require('fs');
         console.log(chunk);
         body.push(chunk);
        }) 
-       req.on('end', () => { // we use this event listener to work with the chunks of data we gained
+       return req.on('end', () => { // we use this event listener to work with the chunks of data we gained we also return req.on so that the code is executed before it reaches the res.setHeader
         const parsedBody = Buffer.concat(body).toString() // Creates a new buffer with all the chunks received from the req.on and converts it to string
         const message = parsedBody.split('=')[1]; // We take the parsed body split it at the equals sign and store the element on the right side of the =
-        fs.writeFileSync('message.txt', message);
+        fs.writeFile('message.txt', message, (err) => {
+          res.statusCode= 302;
+          res.setHeader('Location', '/')
+          return res .end()
+        });
+      
        })
         
-        res.statusCode= 302;
-        res.setHeader('Location', '/')
-        return res .end()
+      
    }
    res.setHeader('Content-Type', 'text/html') // allows us to set headers quite self evident
    res.write('<html>') // the header returns a response with the html that we used .write to make
