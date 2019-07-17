@@ -1,0 +1,20 @@
+{
+  "name": "first-node-app",
+  "version": "1.0.0",
+  "description": "Learning to use Node.js",
+  "main": "app.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1",
+    "start": "node app.js"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/xdorijanx/first-node-app.git"
+  },
+  "author": "Dorijan Tomić",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/xdorijanx/first-node-app/issues"
+  },
+  "homepage": "https://github.com/xdorijanx/first-node-app#readme"
+}
