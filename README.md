@@ -6,7 +6,7 @@
   </a>
 </p>
 
-> My first Node serverer
+> My first Node server
 
 ## Install
 
@@ -17,14 +17,13 @@ npm install
 ## Usage
 
 ```sh
- Run node app.js inside the root directory to start the server enter localhost:3000 in the url and type some text inside the inputd
+ Run node app.js inside the root directory to start the server enter localhost:3000 in the url and type some text inside the input
 ```
 
 ## Author
 
-👤 **Dorijannn**
+👤 **Dorijan**
 
-* Twitter: [@x](https://twitter.com/x)
 * Github: [@xdorijanx](https://github.com/xdorijanx)
 
 ## Show your support
